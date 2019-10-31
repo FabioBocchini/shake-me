@@ -32,10 +32,17 @@ class EditConfigurationActivity : AppCompatActivity() {
 
         val sharedPref: SharedPreferences = getSharedPreferences("config_file", Context.MODE_PRIVATE)
 
+        val labelNames: Map<String, String> = mapOf(
+            "shake" to "Shake",
+            "flip" to "Screen Down",
+            "lTilt" to "Left Up",
+            "up" to "Vertical"
+        )
+
         action = intent.getStringExtra("ACTION")
 
         findViewById<TextView>(R.id.tvAction).apply{
-            text = action
+            text = labelNames[action!!]
         }
 
         swIsBrowser.setOnCheckedChangeListener{ _ , isChecked ->

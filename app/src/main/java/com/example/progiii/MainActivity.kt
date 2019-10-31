@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
+import android.util.Log
 import android.view.View
 import com.github.nisrulz.sensey.*
 
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     private val defaultLinks: Map<String, String> = mapOf(
         "shake" to "https://tinyurl.com/yxg7yhmm",
         "flip" to "https://tinyurl.com/yylheamx",
-        "tilt" to "https://tinyurl.com/y3lmur3b",
+        "lTilt" to "https://tinyurl.com/y3lmur3b",
         "up" to "https://tinyurl.com/y4k42qwt"
     )
 
@@ -39,21 +40,21 @@ class MainActivity : AppCompatActivity() {
         val vibrator: Vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         val tvFlip: TextView = findViewById(R.id.tvGestureFlip)
         val tvShake: TextView = findViewById(R.id.tvGestureShake)
-        val tvTilt: TextView = findViewById(R.id.tvGestureChop)
+        val tvLTilt: TextView = findViewById(R.id.tvGestureLTilt)
         val tvUp: TextView = findViewById(R.id.tvGestureUp)
         val tvVersion: TextView = findViewById(R.id.tvVersion)
         tvVersion.text = VERSION_NUMBER
 
         //create Action data objects
-        val shakeAction = getActionPreferences("shake")
-        val flipAction= getActionPreferences("flip")
-        val tiltAction= getActionPreferences("tilt")
-        val upAction= getActionPreferences("up")
+        val shakeAction: Action = getActionPreferences("shake")
+        val flipAction: Action= getActionPreferences("flip")
+        val lTiltAction: Action= getActionPreferences("tilt")
+        val upAction: Action= getActionPreferences("up")
 
         //set Labels
         tvShake.text = shakeAction.placeholder
         tvFlip.text = flipAction.placeholder
-        tvTilt.text = tiltAction.placeholder
+        tvLTilt.text = lTiltAction.placeholder
         tvUp.text = upAction.placeholder
 
         //create Listeners
@@ -80,15 +81,16 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        rotationListener= RotationAngleDetector.RotationAngleListener { _, y, z ->
+        rotationListener= RotationAngleDetector.RotationAngleListener { x , y, z ->
                 if(((z > 88) and (z < 92)) and ((y > 0) or (y < -4))) {
                     vibrate(vibrator, 200)
-                    createIntent(tiltAction)
+                    createIntent(lTiltAction)
                 }
                 else if(((y > -4) and (y < 0)) and ((z > 92) or (z < 88))){
                     vibrate(vibrator, 200)
                     createIntent(upAction)
                 }
+            Log.d("TAG", x.toString())
             }
 
         startListeners()
@@ -194,17 +196,17 @@ class MainActivity : AppCompatActivity() {
     private fun refresh(){
         val tvFlip: TextView = findViewById(R.id.tvGestureFlip)
         val tvShake: TextView = findViewById(R.id.tvGestureShake)
-        val tvTilt: TextView = findViewById(R.id.tvGestureChop)
+        val tvLTilt: TextView = findViewById(R.id.tvGestureLTilt)
         val tvUp: TextView = findViewById(R.id.tvGestureUp)
 
-        val shakeAction = getActionPreferences("shake")
-        val flipAction= getActionPreferences("flip")
-        val tiltAction= getActionPreferences("tilt")
-        val upAction= getActionPreferences("up")
+        val shakeAction: Action = getActionPreferences("shake")
+        val flipAction: Action= getActionPreferences("flip")
+        val lTiltAction: Action= getActionPreferences("tilt")
+        val upAction: Action= getActionPreferences("up")
 
         tvShake.text = shakeAction.placeholder
         tvFlip.text = flipAction.placeholder
-        tvTilt.text = tiltAction.placeholder
+        tvLTilt.text = lTiltAction.placeholder
         tvUp.text = upAction.placeholder
 
         startListeners()
@@ -220,7 +222,6 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         refresh()
-
     }
 
     override fun onRestart() {

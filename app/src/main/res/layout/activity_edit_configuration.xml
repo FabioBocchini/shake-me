@@ -14,7 +14,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
-        android:text="action"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#00574B"
         app:layout_constraintStart_toStartOf="parent"

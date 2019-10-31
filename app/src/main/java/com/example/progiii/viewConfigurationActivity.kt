@@ -71,12 +71,12 @@ class ViewConfigurationActivity : AppCompatActivity() {
                 findViewById(R.id.tvFlipPlaceholderSelected),
                 sharedPref
             ),
-            "tilt" to ActionConfiguration(
-                "tilt",
-                findViewById(R.id.tvEditTilt),
-                findViewById(R.id.tvTiltUrlSelected),
-                findViewById(R.id.tvTiltAppSelected),
-                findViewById(R.id.tvTiltPlaceholderSelected),
+            "lTilt" to ActionConfiguration(
+                "lTilt",
+                findViewById(R.id.tvEditLTilt),
+                findViewById(R.id.tvLTiltUrlSelected),
+                findViewById(R.id.tvLTiltAppSelected),
+                findViewById(R.id.tvLTiltPlaceholderSelected),
                 sharedPref
             ),
 
@@ -102,7 +102,7 @@ class ViewConfigurationActivity : AppCompatActivity() {
 
     private fun editConfiguration(view: View, action: String){
         //creating an intent to start another activity
-        val editIntent= Intent(this, EditConfigurationActivity::class.java).apply {
+        val editIntent: Intent = Intent(this, EditConfigurationActivity::class.java).apply {
             putExtra("ACTION", action )
         }
 

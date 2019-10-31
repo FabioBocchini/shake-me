@@ -10,11 +10,11 @@
         android:id="@+id/textView5"
         android:layout_width="103dp"
         android:layout_height="wrap_content"
-        android:text="Side Tilt "
+        android:text="Left Up"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvGestureChop"
+        app:layout_constraintStart_toEndOf="@+id/tvGestureLTilt"
         app:layout_constraintTop_toBottomOf="@+id/imgGestureChop" />
 
     <TextView
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgGestureUp" />
 
     <TextView
-        android:id="@+id/tvGestureChop"
+        android:id="@+id/tvGestureLTilt"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imgGestureUp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGestureChop"
+        app:layout_constraintTop_toBottomOf="@+id/tvGestureLTilt"
         tools:text="@string/up_label" />
 
     <TextView
@@ -122,7 +122,7 @@
         android:contentDescription="@string/tilt_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvGestureChop"
+        app:layout_constraintStart_toEndOf="@+id/tvGestureLTilt"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:srcCompat="@drawable/icons8_rotate_screen_90"
         tools:srcCompat="@drawable/icons8_rotate_screen_90" />

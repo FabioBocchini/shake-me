@@ -5,10 +5,10 @@
     <string name="tilt_icon">Tilt Icon</string>
     <string name="shake_icon">Shake Icon</string>
     <string name="up_icon">Up Icon</string>
-    <string name="flip_label">Flip</string>
-    <string name="tilt_label">Tilt</string>
+    <string name="flip_label">Screen Down</string>
+    <string name="lTilt_label">Left Up</string>
     <string name="shake_label">Shake</string>
-    <string name="up_label">Up</string>
+    <string name="up_label">Vertical</string>
     <string name="url_menu">Url:</string>
     <string name="app_menu">App:</string>
     <string name="placeholder_menu">Placeholder:</string>

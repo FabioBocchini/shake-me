@@ -57,7 +57,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="www.Google.com"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -84,7 +83,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="None"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -111,7 +109,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="Gugol"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -150,7 +147,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="www.Google.com"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -177,7 +173,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="None"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -204,7 +199,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="Gugol"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -212,13 +206,13 @@
             <!-- Tilt -->
 
             <TextView
-                android:id="@+id/tvEditTilt"
+                android:id="@+id/tvEditLTilt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                android:text="@string/tilt_label"
+                android:text="@string/lTilt_label"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -231,7 +225,7 @@
                 android:paddingRight="10dp">
 
                 <TextView
-                    android:id="@+id/tvTiltUrl"
+                    android:id="@+id/tvLTiltUrl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -239,12 +233,11 @@
                     android:textColor="@color/cardview_light_background" />
 
                 <TextView
-                    android:id="@+id/tvTiltUrlSelected"
+                    android:id="@+id/tvLTiltUrlSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="www.Google.com"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -258,7 +251,7 @@
                 android:paddingRight="10dp">
 
                 <TextView
-                    android:id="@+id/tvTiltApp"
+                    android:id="@+id/tvLTiltApp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -266,12 +259,11 @@
                     android:textColor="@color/cardview_light_background" />
 
                 <TextView
-                    android:id="@+id/tvTiltAppSelected"
+                    android:id="@+id/tvLTiltAppSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="None"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -285,7 +277,7 @@
                 android:paddingRight="10dp">
 
                 <TextView
-                    android:id="@+id/tvTiltPlaceholder"
+                    android:id="@+id/tvLTiltPlaceholder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -293,12 +285,11 @@
                     android:textColor="@color/cardview_light_background" />
 
                 <TextView
-                    android:id="@+id/tvTiltPlaceholderSelected"
+                    android:id="@+id/tvLTiltPlaceholderSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="Gugol"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -337,7 +328,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="www.Google.com"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -364,7 +354,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="None"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -391,7 +380,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
-                    android:text="Gugol"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
