@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -31,6 +31,8 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:focusable="true"
                 android:text="@string/shake_label"
                 android:textStyle="bold" />
 
@@ -49,15 +51,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/url_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvShakeUrlSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -75,15 +77,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/app_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvShakeAppSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -101,15 +103,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/placeholder_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvShakePlaceholderSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <!-- Flip -->
@@ -121,7 +123,9 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:text="@string/flip_label"
+                android:focusable="true"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -139,15 +143,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/url_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvFlipUrlSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -165,15 +169,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/app_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvFlipAppSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -191,15 +195,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/placeholder_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvFlipPlaceholderSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
 
@@ -212,7 +216,9 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:text="@string/lTilt_label"
+                android:focusable="true"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -230,15 +236,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/url_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvLTiltUrlSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -256,15 +262,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/app_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvLTiltAppSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -282,16 +288,110 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/placeholder_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvLTiltPlaceholderSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
+
+
+            <!-- rTilt -->
+
+            <TextView
+                android:id="@+id/tvEditRTilt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                android:text="@string/rTilt_label"
+                android:focusable="true"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layoutHeight"
+                android:background="#00574B"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tvRTiltUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/url_menu"
+                    android:textColor="@color/white_text" />
+
+                <TextView
+                    android:id="@+id/tvRTiltUrlSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layoutHeight"
+                android:background="#00574B"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tvRTiltApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/app_menu"
+                    android:textColor="@color/white_text" />
+
+                <TextView
+                    android:id="@+id/tvRTiltAppSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layoutHeight"
+                android:background="#00574B"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tvRTiltPlaceholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder_menu"
+                    android:textColor="@color/white_text" />
+
+                <TextView
+                    android:id="@+id/tvRTiltPlaceholderSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
+            </LinearLayout>
+
 
             <!-- Up -->
 
@@ -302,7 +402,9 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                 android:text="@string/up_label"
+                android:focusable="true"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -320,15 +422,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/url_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvUpUrlSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -346,15 +448,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/app_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvUpAppSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -372,15 +474,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/placeholder_menu"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/white_text" />
 
                 <TextView
                     android:id="@+id/tvUpPlaceholderSelected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="right|center_vertical"
-                    android:textColor="@color/cardview_light_background" />
+                    android:gravity="end|center_vertical"
+                    android:textColor="@color/white_text" />
             </LinearLayout>
 
         </LinearLayout>

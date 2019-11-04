@@ -36,6 +36,7 @@ class EditConfigurationActivity : AppCompatActivity() {
             "shake" to "Shake",
             "flip" to "Screen Down",
             "lTilt" to "Left Up",
+            "rTilt" to "Right Up",
             "up" to "Vertical"
         )
 
@@ -86,7 +87,6 @@ class EditConfigurationActivity : AppCompatActivity() {
         val etConfUrl: TextView = findViewById(R.id.etConfUrl)
         val etConfPlaceholder: TextView = findViewById(R.id.etConfPlaceholder)
         val tvConfApp: TextView = findViewById(R.id.tvConfApp)
-
         val sharedPref: SharedPreferences = getSharedPreferences("config_file", Context.MODE_PRIVATE)
 
         val editor: SharedPreferences.Editor = sharedPref.edit()

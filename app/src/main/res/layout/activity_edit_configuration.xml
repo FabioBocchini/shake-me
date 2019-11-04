@@ -25,10 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="50dp"
-        android:text="Url: "
+        android:layout_marginTop="40dp"
+        android:text="@string/url_menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAction" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
         android:id="@+id/etConfUrl"
@@ -38,7 +38,8 @@
         android:layout_marginLeft="76dp"
         android:cursorVisible="true"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textUri"
+        android:hint="@string/url_hint"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView"
         app:layout_constraintStart_toEndOf="@+id/textView" />
 
@@ -49,7 +50,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="40dp"
-        android:text="App:"
+        android:text="@string/app_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -59,9 +60,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
-        android:backgroundTint="#00574B"
-        android:text="choose"
-        android:textColor="@color/cardview_light_background"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/choose_menu"
+        android:textColor="@color/white_text"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
         app:layout_constraintStart_toEndOf="@+id/textView2" />
 
@@ -72,7 +73,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="40dp"
-        android:text="Placeholder:"
+        android:text="@string/placeholder_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -84,6 +85,7 @@
         android:layout_marginLeft="24dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:hint="@string/placeholder_hint"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView4" />
 
@@ -93,7 +95,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:text="TextView"
         app:layout_constraintBaseline_toBaselineOf="@+id/button"
         app:layout_constraintStart_toEndOf="@+id/button" />
 
@@ -101,11 +102,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Url"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvAction"
-        app:layout_constraintEnd_toStartOf="@+id/swIsBrowser" />
+        android:text="@string/url_switch"
+        app:layout_constraintEnd_toStartOf="@+id/swIsBrowser"
+        app:layout_constraintTop_toBottomOf="@+id/tvAction" />
 
     <Switch
         android:id="@+id/swIsBrowser"
@@ -120,9 +122,9 @@
         android:id="@+id/textView9"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="Application"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:text="@string/app_switch"
         app:layout_constraintBaseline_toBaselineOf="@+id/swIsBrowser"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -134,6 +136,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="24dp"
         android:clickable="true"
+        android:focusable="true"
         android:onClick="updateData"
         app:backgroundTint="#00574B"
         app:layout_constraintBottom_toBottomOf="parent"

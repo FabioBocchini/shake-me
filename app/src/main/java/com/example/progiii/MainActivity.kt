@@ -15,7 +15,7 @@ import android.view.View
 import com.github.nisrulz.sensey.*
 
 
-private const val VERSION_NUMBER: String = "1.0.1"
+private const val VERSION_NUMBER: String = "1.0.2"
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         "shake" to "https://tinyurl.com/yxg7yhmm",
         "flip" to "https://tinyurl.com/yylheamx",
         "lTilt" to "https://tinyurl.com/y3lmur3b",
+        "rTilt" to "www.youtube.com",
         "up" to "https://tinyurl.com/y4k42qwt"
     )
 
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         val tvFlip: TextView = findViewById(R.id.tvGestureFlip)
         val tvShake: TextView = findViewById(R.id.tvGestureShake)
         val tvLTilt: TextView = findViewById(R.id.tvGestureLTilt)
+        val tvRTilt: TextView = findViewById(R.id.tvGestureRTilt)
         val tvUp: TextView = findViewById(R.id.tvGestureUp)
         val tvVersion: TextView = findViewById(R.id.tvVersion)
         tvVersion.text = VERSION_NUMBER
@@ -48,13 +50,15 @@ class MainActivity : AppCompatActivity() {
         //create Action data objects
         val shakeAction: Action = getActionPreferences("shake")
         val flipAction: Action= getActionPreferences("flip")
-        val lTiltAction: Action= getActionPreferences("tilt")
+        val lTiltAction: Action= getActionPreferences("lTilt")
+        val rTiltAction: Action = getActionPreferences("rTilt")
         val upAction: Action= getActionPreferences("up")
 
         //set Labels
         tvShake.text = shakeAction.placeholder
         tvFlip.text = flipAction.placeholder
         tvLTilt.text = lTiltAction.placeholder
+        tvRTilt.text = rTiltAction.placeholder
         tvUp.text = upAction.placeholder
 
         //create Listeners
@@ -86,11 +90,14 @@ class MainActivity : AppCompatActivity() {
                     vibrate(vibrator, 200)
                     createIntent(lTiltAction)
                 }
+                else if(((z < -88) and (z > -92)) and ((y > 0) or (y < -4))) {
+                    vibrate(vibrator, 200)
+                    createIntent(rTiltAction)
+                }
                 else if(((y > -4) and (y < 0)) and ((z > 92) or (z < 88))){
                     vibrate(vibrator, 200)
                     createIntent(upAction)
                 }
-            Log.d("TAG", x.toString())
             }
 
         startListeners()
@@ -197,16 +204,19 @@ class MainActivity : AppCompatActivity() {
         val tvFlip: TextView = findViewById(R.id.tvGestureFlip)
         val tvShake: TextView = findViewById(R.id.tvGestureShake)
         val tvLTilt: TextView = findViewById(R.id.tvGestureLTilt)
+        val tvRTilt: TextView = findViewById(R.id.tvGestureRTilt)
         val tvUp: TextView = findViewById(R.id.tvGestureUp)
 
         val shakeAction: Action = getActionPreferences("shake")
         val flipAction: Action= getActionPreferences("flip")
-        val lTiltAction: Action= getActionPreferences("tilt")
+        val lTiltAction: Action= getActionPreferences("lTilt")
+        val rTiltAction: Action= getActionPreferences("rTilt")
         val upAction: Action= getActionPreferences("up")
 
         tvShake.text = shakeAction.placeholder
         tvFlip.text = flipAction.placeholder
         tvLTilt.text = lTiltAction.placeholder
+        tvRTilt.text = rTiltAction.placeholder
         tvUp.text = upAction.placeholder
 
         startListeners()
@@ -222,12 +232,6 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         refresh()
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-
-        startListeners()
     }
 
     override fun onDestroy() {

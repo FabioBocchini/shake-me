@@ -23,11 +23,11 @@ class ActionConfiguration(
         if (sharedPref.getBoolean("$action.isBrowserIntent", true)) {
             tvUrl.text = sharedPref.getString("$action.url", "")
             tvApp.text = " "
-            tvPlaceholder.text = sharedPref.getString("$action.placeholder", action)
+            tvPlaceholder.text = sharedPref.getString("$action.placeholder", "")
         } else {
             tvApp.text = sharedPref.getString("$action.appName", "")
             tvUrl.text = " "
-            tvPlaceholder.text = sharedPref.getString("$action.placeholder", action)
+            tvPlaceholder.text = sharedPref.getString("$action.placeholder", "")
         }
     }
 
@@ -79,7 +79,14 @@ class ViewConfigurationActivity : AppCompatActivity() {
                 findViewById(R.id.tvLTiltPlaceholderSelected),
                 sharedPref
             ),
-
+            "rTilt" to ActionConfiguration(
+                "rTilt",
+                findViewById(R.id.tvEditRTilt),
+                findViewById(R.id.tvRTiltUrlSelected),
+                findViewById(R.id.tvRTiltAppSelected),
+                findViewById(R.id.tvRTiltPlaceholderSelected),
+                sharedPref
+            ),
             "up" to ActionConfiguration(
                 "up",
                 findViewById(R.id.tvEditUp),
