@@ -1,4 +1,4 @@
-package com.example.progiii
+package com.example.shakeme
 
 import android.content.Context
 import android.os.Build
@@ -10,8 +10,8 @@ import android.widget.TextView
 import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
-import android.util.Log
 import android.view.View
+import com.example.shakeme.R
 import com.github.nisrulz.sensey.*
 
 
@@ -49,10 +49,10 @@ class MainActivity : AppCompatActivity() {
 
         //create Action data objects
         val shakeAction: Action = getActionPreferences("shake")
-        val flipAction: Action= getActionPreferences("flip")
-        val lTiltAction: Action= getActionPreferences("lTilt")
+        val flipAction: Action = getActionPreferences("flip")
+        val lTiltAction: Action = getActionPreferences("lTilt")
         val rTiltAction: Action = getActionPreferences("rTilt")
-        val upAction: Action= getActionPreferences("up")
+        val upAction: Action = getActionPreferences("up")
 
         //set Labels
         tvShake.text = shakeAction.placeholder
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        rotationListener= RotationAngleDetector.RotationAngleListener { x , y, z ->
+        rotationListener= RotationAngleDetector.RotationAngleListener { _ , y, z ->
                 if(((z > 88) and (z < 92)) and ((y > 0) or (y < -4))) {
                     vibrate(vibrator, 200)
                     createIntent(lTiltAction)
@@ -208,10 +208,10 @@ class MainActivity : AppCompatActivity() {
         val tvUp: TextView = findViewById(R.id.tvGestureUp)
 
         val shakeAction: Action = getActionPreferences("shake")
-        val flipAction: Action= getActionPreferences("flip")
-        val lTiltAction: Action= getActionPreferences("lTilt")
-        val rTiltAction: Action= getActionPreferences("rTilt")
-        val upAction: Action= getActionPreferences("up")
+        val flipAction: Action = getActionPreferences("flip")
+        val lTiltAction: Action = getActionPreferences("lTilt")
+        val rTiltAction: Action = getActionPreferences("rTilt")
+        val upAction: Action = getActionPreferences("up")
 
         tvShake.text = shakeAction.placeholder
         tvFlip.text = flipAction.placeholder

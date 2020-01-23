@@ -1,4 +1,4 @@
-package com.example.progiii
+package com.example.shakeme
 
 import android.app.ListActivity
 import android.content.pm.PackageManager
@@ -11,6 +11,7 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import java.util.*
 import android.widget.*
+import com.example.shakeme.R
 
 
 class ChooserActivity : ListActivity() {

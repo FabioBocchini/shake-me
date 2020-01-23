@@ -1,4 +1,4 @@
-package com.example.progiii
+package com.example.shakeme
 
 import android.content.Context
 import android.content.Intent
@@ -10,7 +10,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_edit_configuration.*
 import android.view.View
 import android.widget.*
-
+import com.example.shakeme.R
 
 
 class EditConfigurationActivity : AppCompatActivity() {

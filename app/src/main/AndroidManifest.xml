@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.progiii">
+    package="com.example.shakeme">
 
     <uses-permission android:name="android.permission.VIBRATE" />
 
@@ -12,16 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ChooserActivity"
-            android:parentActivityName=".EditConfigurationActivity" />
+            android:name="com.example.shakeme.ChooserActivity"
+            android:parentActivityName="com.example.shakeme.EditConfigurationActivity" />
         <activity
-            android:name=".EditConfigurationActivity"
-            android:parentActivityName=".ViewConfigurationActivity"
+            android:name="com.example.shakeme.EditConfigurationActivity"
+            android:parentActivityName="com.example.shakeme.ViewConfigurationActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ViewConfigurationActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:name="com.example.shakeme.ViewConfigurationActivity"
+            android:parentActivityName="com.example.shakeme.MainActivity" />
+        <activity android:name="com.example.shakeme.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
